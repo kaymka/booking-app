@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение для бронирования отелей</title>
+
+    <script type="module" crossorigin src="assets/index-BEpYNRa4.js"></script>
+    <link rel="stylesheet" crossorigin href="assets/index-5vEGNK4S.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Поиск жилья</h1>
+
+        <form id="searchForm" class="search-form">
+            <!-- Поле для города -->
+            <div class="form-group">
+                <label for="cityInput">Город или страна *</label>
+                <input id="cityInput" type="text" required placeholder="Например: Москва, Париж, Нью-Йорк" autocomplete="off">
+                <div class="error-message" id="cityError"></div>
+            </div>
+
+            <!-- Поле для даты заезда -->
+            <div class="form-group">
+                <label for="checkInDate">Дата заезда</label>
+                <input id="checkInDate" type="text" required placeholder="ДД.ММ.ГГГГ" maxlength="10" autocomplete="off">
+                <div class="error-message" id="checkInError"></div>
+            </div>
+
+            <!-- Поле для даты выезда -->
+            <div class="form-group">
+                <label for="checkOutDate">Дата выезда</label>
+                <input id="checkOutDate" type="text" required placeholder="ДД.ММ.ГГГГ" maxlength="10" autocomplete="off">
+                <div class="error-message" id="checkOutError"></div>
+            </div>
+
+            <!-- Кнопка отправки -->
+            <button id="searchButton" type="button" class="search-button" disabled>
+                Найти
+            </button>
+        </form>
+
+        <!-- Контейнер для результатов поиска -->
+        <div id="resultsContainer" class="results-container">
+            <p class="empty-state">Введите город и даты для поиска жилья</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
